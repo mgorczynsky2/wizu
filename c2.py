@@ -1,15 +1,18 @@
 import math
 def a2(a,b):
-    if (isinstance(a,float)) == 1 and isinstance(b,float)==1:
+    if (isinstance(a,float)) or isinstance(b,float):
         return (math.fmod(a, b))
     else:
         return(a%b)
-print (a2(10,3.15))
+
+def a4(a):
+    print(math.exp(a))
+    print(math.e**a)
+    print(math.pow(math.e,a))
 
 def a3(a,n):
     for i in range (2,n+2):
         print(math.log(a,i),end="|")
-a3(100,3)
 
 def b1(a):
     for i in range (0,len(a)):
@@ -31,4 +34,5 @@ b4(a,b)
 txt="My name is {imie}. My date of birth is {data}"
 print(txt.format(imie="Marcin",data="7.02.2022"))
 
+a4(3.14)
 
